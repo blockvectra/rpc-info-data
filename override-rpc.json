@@ -24,7 +24,8 @@
     "https://rpc.payload.de",
     "https://singapore.rpc.blxrbdn.com",
     "https://uk.rpc.blxrbdn.com",
-    "https://virginia.rpc.blxrbdn.com"
+    "https://virginia.rpc.blxrbdn.com",
+    "https://api.blockvectra.com/v1/eth_mainnet/public"
   ],
   "5": [
     "https://eth-goerli.public.blastapi.io",
@@ -68,7 +69,8 @@
     "https://bscrpc.com",
     "https://koge-rpc-bsc.48.club",
     "https://rpc-bsc.48.club",
-    "https://bnb.api.onfinality.io/public"
+    "https://bnb.api.onfinality.io/public",
+    "https://api.blockvectra.com/v1/bsc_mainnet/public"
   ],
   "97": [
     "https://data-seed-prebsc-1-s1.binance.org:8545"
@@ -82,7 +84,8 @@
   "137": [
     "https://matic-mainnet.chainstacklabs.com",
     "https://polygon-rpc.com",
-    "https://polygon.api.onfinality.io/public"
+    "https://polygon.api.onfinality.io/public",
+    "https://api.blockvectra.com/v1/polygon_mainnet/public"
   ],
   "250": [
     "https://rpc.ftm.tools",
@@ -119,11 +122,18 @@
     "https://eth-sepolia.g.alchemy.com/v2/demo",
     "https://ethereum-sepolia.blockpi.network/v1/rpc/public",
     "https://rpc.sepolia.org",
-    "https://endpoints.omniatech.io/v1/eth/sepolia/public"
+    "https://endpoints.omniatech.io/v1/eth/sepolia/public",
+    "https://api.blockvectra.com/v1/eth_sepolia/public"
   ],
   "1666600000": [
     "https://api.harmony.one",
     "https://api.s0.b.hmny.io",
     "https://harmony-mainnet.chainstacklabs.com"
+  ],
+  "8453": [
+    "https://api.blockvectra.com/v1/base_mainnet/public"
+  ],
+  "42161": [
+    "https://api.blockvectra.com/v1/arb_mainnet/public"
   ]
 }
