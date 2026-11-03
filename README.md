@@ -89,6 +89,12 @@ If the network is not in [chainid.network/chains.json](https://chainid.network/c
 
 ### For Networks with Chain IDs
 
+Chain IDs are not always unique across networks. Known collisions, currently
+Wanchain Testnet and HyperEVM on `999`, skip chain-ID RPC overrides and automatic
+dRPC injection. Keep their RPCs on the explicit network record in the primary
+source or `override-networks.json`; a numeric `999` entry in `override-rpc.json`
+cannot distinguish them.
+
 #### RPCs in Primary Source
 If the RPC endpoint exists in [chainid.network/chains.json](https://chainid.network/chains.json):
 
@@ -145,6 +151,9 @@ If the RPC endpoint is not in the primary source:
 ```bash
 # Run all tests
 pnpm test
+
+# Run offline generator regression tests without installing dependencies
+node --test tests/refresh-data.test.mjs
 
 # Run tests in watch mode
 pnpm run test:watch

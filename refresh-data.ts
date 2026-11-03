@@ -14,6 +14,9 @@ const OVERRIDE_NETWORKS: Network[] = readJsonFile("./override-networks.json");
 const OVERRIDE_CHAIN_NAMES = readJsonFile("./override-chain-names.json");
 const OVERRIDE_RPCS_BY_CHAIN_ID = readJsonFile("./override-rpc.json");
 
+// Wanchain Testnet and HyperEVM share 999. Numeric IDs cannot select their RPCs.
+const CHAIN_IDS_REQUIRING_EXPLICIT_RPCS = new Set([999]);
+
 async function fetchAndSaveChains() {
   try {
     console.log("🐛 Fetching chains from API...");
@@ -118,6 +121,10 @@ const getFinalRpcs = (network: Network) => {
   const chainId = network.chainId;
   const rpcs = network.rpc;
 
+  if (chainId !== null && CHAIN_IDS_REQUIRING_EXPLICIT_RPCS.has(chainId)) {
+    return rpcs;
+  }
+
   if (chainId && chainId in OVERRIDE_RPCS_BY_CHAIN_ID) {
     const newRpcs = new Set([
       ...OVERRIDE_RPCS_BY_CHAIN_ID[
@@ -138,7 +145,10 @@ const addDRPCEndpoint = (
 ) => {
   const rpcs = getFinalRpcs(network);
 
-  if (network.chainId === null) {
+  if (
+    network.chainId === null ||
+    CHAIN_IDS_REQUIRING_EXPLICIT_RPCS.has(network.chainId)
+  ) {
     return rpcs;
   }
 

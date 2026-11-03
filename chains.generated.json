@@ -79536,7 +79536,6 @@
         "name": "Wanchain Testnet",
         "chain": "WAN",
         "rpc": [
-          "https://hyperliquid.drpc.org",
           "https://gwan-ssl.wandevs.org:46891/"
         ],
         "faucets": [],
