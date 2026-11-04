@@ -38295,6 +38295,7 @@
         "chain": "katana",
         "rpc": [
           "https://katana.drpc.org",
+          "https://api.blockvectra.com/v1/katana_mainnet/public",
           "https://rpc.katana.network",
           "https://katana.gateway.tenderly.co/",
           "https://rpc.katanarpc.com/"

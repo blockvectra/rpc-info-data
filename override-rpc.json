@@ -128,5 +128,6 @@
   ],
   "57073": ["https://api.blockvectra.com/v1/ink_mainnet/public"],
   "130": ["https://api.blockvectra.com/v1/unichain_mainnet/public"],
-  "252": ["https://api.blockvectra.com/v1/fraxtal_mainnet/public"]
+  "252": ["https://api.blockvectra.com/v1/fraxtal_mainnet/public"],
+  "747474": ["https://api.blockvectra.com/v1/katana_mainnet/public"]
 }
